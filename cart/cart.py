@@ -1,5 +1,5 @@
 
-class Car():
+class Cart():
 
     def __init__(self, request):
 
@@ -13,7 +13,7 @@ class Car():
         if 'session_key' not in request.session:
 
             cart = self.session['session_key'] = {}
-            
+
         self.cart = cart
         
 
