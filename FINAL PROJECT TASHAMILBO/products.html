@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TASHAMILBO PRODUCTS</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://js.braintreegateway.com/web/dropin/1.32.0/js/dropin.js"></script>
+  </head>
+  <body>
+
+
+    <nav>
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="img/logo_blog.jpg" class="logo" alt="logo" />
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="index.html">home</a>
+            </li>
+            <li>
+              <a href="products.html">products</a>
+            </li>
+            <li>
+              <a href="about.html">about</a>
+            </li>
+            <li>
+              <a href="3Ddesign.html"><b>3D</b>design</a>
+            </li>
+            <li>
+              <a href="appointment.html">appointment</a>
+            </li>
+            <li>
+              <a href="contact.html">contact</a>
+            </li>
+          </ul>
+        </div>
+        <!--cart button-->
+        <div class="cart-btn">
+          <span class="nav-icon">
+            <i class="fas fa-shopping-bag"></i>
+          </span>
+          <super class="cart-items">0</super>
+        </div>
+      </div>
+    </nav>
+    <!--products-->
+    <section class="products">
+      <div class="section-title">
+        <h2>Our Dresses</h2>
+      </div>
+      <div class="products-center">
+        <!--single product--
+            <article class="product">
+                <div class="img-container">
+                    <img src="./images/product-1.jpeg" alt="product"
+                    class="product-img">
+                    <button class="bag-btn" data-id="1">
+                    <i class="fas fa-shopping-cart"></i>
+                    add to bag
+                    </button>
+                </div>
+                <h3>queen bed</h3>
+                <h4>£250</h4>
+            </article>
+            -- end of single product-->
+      </div>
+    </section>
+    <!--end of products-->
+    <!--cart-->
+    <div class="cart-overlay">
+      <div class="cart">
+        <span class="close-cart">
+          <i class="fas fa-window-close"></i>
+        </span>
+        <h2>your cart</h2>
+        <div class="cart-content">
+          <!--cart-item-->
+          <div class="cart-item">
+            <!-- <img src="./images/product-1.jpeg" alt="product">
+                    <div>
+                        <h4>queen bed</h4>
+                        <h5>£250.00</h5>
+                        <span class="remove-item">remove</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-plus"></i>
+                        <p class="item-amount">1</p>
+                        <i class="fas fa-minus"></i>
+                    </div> -->
+          </div>
+          <!-- end of cart-item-->
+        </div>
+        <div class="cart-footer">
+          <h3>your total : £ <span class="cart-total">250</span></h3>
+          <button class="clear-cart banner-btn">clear cart</button>
+
+          <button id="checkout-btn" class="checkout banner-btn">
+            Checkout
+          </button>
+          <div id="dropin-container"></div>
+          <!-- <button id="submit-button" class="button button--small button--green">Purchase</button> -->
+        </div>
+      </div>
+    </div>
+    <!-- checkout-modal-->
+    <div class="checkout-modal">
+      <button class="close-btn" id="checkout-close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="checkout-modal-content">
+        <div class="modal-inner-wrap">
+          <!-- <form action="." method="post" id="checkout-form">
+
+              <label for="card-first-name">First Name</label>
+              <input
+              type="number"
+              name="card-first-name"
+              id="card-first-name"
+              />
+              <label for="card-last-name">Last Name</label>
+              <input type="number" name="card-last-name" id="card-last-name" />
+
+            <label for="card-number">Card Number</label>
+            <input type="text" name="card-number" id="card-number" />
+            <div class="form-row">
+              <label for="card-expiry-month">Expiry M/Y</label>
+              <input
+              type="text"
+              name="card-expiry-month"
+              id="card-expiry-month"
+              size="10px"
+              />
+              <label for="cvv">Card CVV</label>
+              <input 
+              type="text" 
+              name="cvv" 
+              id="cvv" 
+              size="10px" />
+              <button>PAY NOW</button>
+            </div>
+          </form> -->
+          
+        </div>
+      </div>
+    </div>
+    <!--end of checkout-modal-->
+    <script src="src/products.js"></script>
+    <!-- javascript -->
+    <script src="src/app.js"></script>
+    <!-- <script>
+      let checkoutBtn = $("#checkout-btn");
+      let checoutModal = $(".checkout-modal")[0];
+      let checoutModalClose = $("#checkout-close-btn");
+
+      checkoutBtn.click(function () {
+        checoutModal.classList.add("open");
+      });
+
+      checoutModalClose.click(function () {
+        checoutModal.classList.remove("open");
+      });
+
+      var button = document.querySelector('#submit-button');
+
+      braintree.dropin.create({
+        authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b',
+        selector: '#dropin-container'
+      }, function (err, instance) {
+        button.addEventListener('click', function () {
+          instance.requestPaymentMethod(function (err, payload) {
+            // Submit payload.nonce to your server
+          });
+        })
+      });
+    </script>  -->
+  </body>
+</html>

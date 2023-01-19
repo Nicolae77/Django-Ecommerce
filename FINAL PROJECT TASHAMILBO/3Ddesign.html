@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TASHAMILBO 3Ddesign</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="img/logo_blog.jpg"  class="logo" alt="logo" />
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        <!-- links -->
+        <ul class="links">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          <li>
+            <a href="products.html">products</a>
+          </li>
+          <li>
+            <a href="about.html">about</a>
+          </li>
+          <li>
+            <a href="3Ddesign.html"><b>3D</b>design</a>
+          </li>
+          <li>
+            <a href="appointment.html">appointment</a>
+          </li>
+          <li>
+            <a href="contact.html">contact</a>
+          </li>
+        </ul>
+        
+      </div>
+      <!--cart button-->
+      <div class="cart-btn">
+        <span class="nav-icon">
+            <i class="fas fa-shopping-bag"></i>
+        </span>
+        <super class="cart-items">0</super>
+    </div>
+      </div>
+    </nav>
+    
+    <h3>Dresses Designed in 3D</h3>
+    <!--nature-->
+    <section class="section nature">
+      <img src="img/3d_dress1.jpg" title="DRESS 1" class="img"
+      data-id="1" alt="nature">
+      <img src="img/3d_dress2.jpg" title="DRESS 2" class="img"
+      data-id="2" alt="nature">
+      <img src="img/3d_dress3.jpg" title="DRESS 3" class="img"
+      data-id="3" alt="nature">
+    </section>
+    <h3>Corset Designed in 3D</h3>
+    <!--city-->
+    <section class="section city">
+      <img src="img/3d_corset1.jpg" title="CORSET 1" class="img"
+      data-id="1" alt="city">
+      <img src="img/3d_corset2.jpg" title="CORSET 2" class="img"
+      data-id="2" alt="city">
+      <img src="img/3d_corset3.jpg" title="CORSET3" class="img"
+      data-id="3" alt="city">
+    </section>
+    <!-- modal -->
+    <div class="modal">
+      <button class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-content">
+        <!-- prev next button-->
+        <button class="prev-btn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="next-btn">
+          <i class="fas fa-chevron-right"></i>
+      </button>
+      <img src="" class="main-img">
+      <h3 class="image-name"></h3>
+      <div class="modal-images">
+        
+      </div>
+      </div>
+    </div>
+    <!--cart-->
+    <div class="cart-overlay">
+      <div class="cart">
+          <span class="close-cart">
+              <i class="fas fa-window-close"></i>
+          </span>
+          <h2>your cart</h2>
+          <div class="cart-content">
+              <!--cart-item-->
+              <div class="cart-item">
+                  <!-- <img src="./images/product-1.jpeg" alt="product">
+                  <div>
+                      <h4>queen bed</h4>
+                      <h5>£250.00</h5>
+                      <span class="remove-item">remove</span>
+                  </div>
+                  <div>
+                      <i class="fas fa-plus"></i>
+                      <p class="item-amount">1</p>
+                      <i class="fas fa-minus"></i>
+                  </div> -->
+              </div>
+              <!-- end of cart-item-->
+          </div>
+          <div class="cart-footer">
+              <h3>your total : £ <span class="cart-total">250</span></h3>
+              <button class="clear-cart banner-btn">clear cart</button>
+          </div>
+      </div>
+  </div>
+  <!--end of cart-->
+  
+  <!-- javascript -->
+  <script src="src/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "dress nr.1",
+        "price": 110.99,
+        "image": { "fields": { "file": { "url": "./img/dress1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "dress nr.2",
+        "price": 120.99,
+        "image": { "fields": { "file": { "url": "./img/dress1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "dress nr.3",
+        "price": 130.99,
+        "image": { "fields": { "file": { "url": "./img/dress1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "dress nr.4",
+        "price": 140.99,
+        "image": { "fields": { "file": { "url": "./img/dress1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "dress nr.5",
+        "price": 150.99,
+        "image": { "fields": { "file": { "url": "./img/dress1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "dress nr.6",
+        "price": 160.99,
+        "image": { "fields": { "file": { "url": "./img/dress1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "dress nr.7",
+        "price": 170.99,
+        "image": { "fields": { "file": { "url": "./img/dress1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "dress nr.8",
+        "price": 180.99,
+        "image": { "fields": { "file": { "url": "./img/dress1.jpg" } } }
+      }
+    }
+  ]
+}
