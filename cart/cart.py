@@ -43,7 +43,7 @@ class Cart():
 
         all_product_ids = self.cart.keys()
 
-        products = Product.objects.filter(id_in=all_product_ids)
+        products = Product.objects.filter(id__in=all_product_ids)
 
         cart = self.cart.copy()
 
@@ -58,7 +58,7 @@ class Cart():
             item['total'] = item['price'] * item['qty']
 
             yield item
-            
+
 
 
 
