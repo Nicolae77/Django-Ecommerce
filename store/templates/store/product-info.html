@@ -77,10 +77,12 @@
                                 Add to cart 
                             
                                 </button> 
-                            
-
+                               
                             </div>
-                        
+                            &nbsp;
+                            <a href="{% url 'store' %}">
+                              <button type="button" class="btn btn-outline-secondary btn-block">Continue Shopping</button>
+                            </a>
                         </div>
 
                     </div>
@@ -99,7 +101,7 @@
 
 <script>
  
-// Add button
+// Add
  $(document).on('click', '#add-button', function(e){
 
     e.preventDefault();
