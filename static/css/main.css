@@ -1,0 +1,21 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .centered {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 8px #000000;
+    font-size: 30px;
+  }
+ 
+  .h4 {
+    color: white;
+    text-shadow: 2px 2px 8px #000000;
+    font-size: 30px;
+  }
