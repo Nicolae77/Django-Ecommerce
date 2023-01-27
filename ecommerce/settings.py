@@ -152,7 +152,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = 'True'
 
-EMAIL_HOST_USER = 'nicolaecaldarasan1983@gmail.com' # Enter you Gmail address
-EMAIL_HOST_PASSWORD = 'BOGDAN'
+EMAIL_HOST_USER = 'tashamilbo@gmail.com' # The host email that sends passwords reset emails.
+
 
 
