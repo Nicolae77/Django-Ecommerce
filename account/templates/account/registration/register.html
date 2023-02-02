@@ -24,7 +24,7 @@
     <div class="container bg-white shadow-md p-5 form-layout">
 
         <h3>Create your account</h3>
-
+         <hr>
         <br>
 
         <form method="POST" autocomplete="off">
@@ -39,8 +39,13 @@
               
             {{form.password2|as_crispy_field}}
              
-            <button type="submit" class="btn btn-secondary btn-lg w-100 btn-block p-2"> &nbsp; Create Account</button>
-
+            <button type="submit" class="btn btn-primary navbar-btn text-white w-100 p-2"> &nbsp; Create Account</button>
+            
+            <br> <br>
+             
+            <div class="text-center">
+              <a href="{% url 'my-login' %}"> Already have an account?</a>
+            </div>
 
         </form>
 
