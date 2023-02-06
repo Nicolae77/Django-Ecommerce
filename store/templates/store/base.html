@@ -193,6 +193,28 @@
     </nav>
 
 
+    {% for message in messages %}
+
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+       
+         <h6 class="alert alert-success text-center">{{message}}</h6>   
+
+        {% endif %}
+
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+       
+         <h6 class="alert alert-danger text-center">{{message}}</h6>   
+
+        {% endif %}
+
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+       
+         <h6 class="alert alert-info text-center">{{message}}</h6>   
+
+        {% endif %}
+
+    {% endfor %}
+
     <body>
 
 

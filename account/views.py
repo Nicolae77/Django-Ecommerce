@@ -20,7 +20,7 @@ from django.contrib.auth import authenticate, login, logout
 
 from django.contrib.auth.decorators import login_required
 
-
+from django.contrib import messages
 
 
 # Create your views here.
@@ -154,6 +154,8 @@ def user_logout(request):
 
         pass
 
+    messages.success(request, "Logout success.")
+
     return redirect("store")
 
 
@@ -179,6 +181,8 @@ def profile_management(request):
 
             user_form.save()
 
+            messages.info(request, "Acount updated.")
+
             return redirect('dashboard')
 
 
@@ -196,6 +200,8 @@ def delete_account(request):
     if request.method == 'POST':
 
         user.delete()
+
+        messages.error(request, "Acount deleted.")
 
         return redirect('store')
 
