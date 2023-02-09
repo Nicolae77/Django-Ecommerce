@@ -6,7 +6,7 @@ class ShippingForm(forms.ModelForm):
     
     class Meta:
 
-        mode = ShippingAddress
+        model = ShippingAddress
 
         fields = ['full_name', 'email', 'address1', 'address2', 'city', 'country', 'postcode']
 
