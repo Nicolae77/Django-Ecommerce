@@ -121,13 +121,16 @@
       <div class="col-12 text-end">
  
         <div class="h6 fw-bold"> Sub total: £ <div id="total" class="d-inline-flex">{{cart.get_total}} </div></div> <!-- cart.get_total --> 
- 
-      </div>
 
-      <a href="{% url 'store' %}">
-        <button type="button" class="btn btn-outline-secondary btn-block">Continue Shopping</button>
-      </a>
- 
+        <br>
+
+        <a href="{% url 'store' %}">
+          <button type="button" class="btn btn-outline-secondary btn-block">Continue Shopping</button>
+        </a>
+
+        <a href="{% url 'checkout' %}" class="btn btn-primary my-2">Proceed to checkout</a>
+        
+    </div>
 
     </div>
   
