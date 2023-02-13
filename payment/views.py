@@ -4,6 +4,8 @@ from . models import ShippingAddress, Order, OrderItem
 
 from cart.cart import Cart
 
+from django.http import JsonResponse
+
 # Create your views here.
 
 def checkout(request):
@@ -71,6 +73,39 @@ def complete_order(request):
         2) Create order -> Guest users without an account
         
         '''
+        #  1) Create order -> Account users with + without shipping information
+
+        if request.user.is_authenticated:
+
+            order = Order.objects.create(full_name=name, email=email, shipping_address=shipping_address,
+            amount_paid = total_cost, user=request.user)
+
+            order_id = order.pk
+
+            for item in cart:
+
+                OrderItem.objects.create(order_id=order_id, product=item['product'],
+                quantity=item['qty'], price=item['price'], user=request.user)
+        
+        # 2) Create order -> Guest users without an account
+        else:
+
+            order = Order.objects.create(full_name=name, email=email, shipping_address=shipping_address,
+            amount_paid = total_cost)
+
+            order_id = order.pk
+
+            for item in cart:
+
+                OrderItem.objects.create(order_id=order_id, product=item['product'],
+                quantity=item['qty'], price=item['price'])
+
+
+        order_success = True
+
+        response = JsonResponse({'success':order_success})
+
+        return response
 
 
 
