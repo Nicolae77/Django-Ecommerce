@@ -112,6 +112,14 @@ def complete_order(request):
 
 def payment_success(request):
 
+    # Clear the shopping cart
+
+    for key in list(request.session.keys()):
+
+        if key == 'session_key':
+
+            del request.session[key]
+
     return render(request, 'payment/payment-success.html')
 
 
