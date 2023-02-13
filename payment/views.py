@@ -24,7 +24,7 @@ def checkout(request):
 
             #Authenticated users with no shipping address
 
-            return render(request, 'payment/checkoyt.html')
+            return render(request, 'payment/checkout.html')
     
     else:
 
