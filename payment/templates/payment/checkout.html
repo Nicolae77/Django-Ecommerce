@@ -26,7 +26,7 @@
 
         <div class="container bg-white shadow-md p-5" style="width:500px; border-radius:20px;">
 
-            <form id="form">
+            <form id="form" onsubmit="event.preventDefault();">
 
                 <div>
 
@@ -112,10 +112,9 @@
 
 
 
-               <button id="complete-order" type="submit" class="btn btn-primary navbar-btn text-white"> &nbsp; Complete order </button>
+               <!-- <button id="complete-order" type="submit" class="btn btn-primary navbar-btn text-white"> &nbsp; Complete order </button> -->
                
-
-                <br> <br>
+                <br>
 
                 <!--PayPal-->
 
@@ -199,7 +198,7 @@
 
      
     // Complete checkout
-
+     /*
      $(document).on('submit', function(e){
 
         e.preventDefault();
@@ -243,6 +242,8 @@
 });
 
 })
+
+*/
 
    </script>
 
