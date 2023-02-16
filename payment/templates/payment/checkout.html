@@ -145,6 +145,9 @@
 
     <script>
 
+        // Total Price
+        var total_price = '{{cart.get_total}}';
+
       // PayPal script
     
       const paypalButtonsComponent = paypal.Buttons({
@@ -172,13 +175,16 @@
 
                             $(':input[required]').each(function(){
 
+
                                 if($(this).val() == ''){
+
 
                                     // The required fields are empty
 
                                     return order_verified = 'No';
 
                                 }
+                                
 
                             });
 
@@ -196,7 +202,6 @@
                         else
                         {
                             actions.disable();
-       
 
                         }
 
@@ -224,7 +229,7 @@
                       purchase_units: [
                           {
                               amount: {
-                                  value: "88.44"
+                                  value: total_price
                               }
                           }
                       ]
