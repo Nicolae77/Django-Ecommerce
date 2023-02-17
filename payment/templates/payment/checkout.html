@@ -163,6 +163,8 @@
 
                 actions.disable();
 
+                // Complete order -No shipping
+
                 document.querySelectorAll('.validate').forEach(item =>{
 
                     item.addEventListener('keyup', event => {
@@ -212,7 +214,43 @@
 
                 });
 
+                // Complete Order With Shipping
 
+                var order_verified = 'Yes';
+
+                        function checkInputs(){
+
+                            $(':input[required]').each(function(){
+
+
+                                if($(this).val() == ''){
+
+
+                                    // The required fields are empty
+
+                                    return order_verified = 'No';
+
+                                }
+                                
+
+                            });
+
+                            return order_verified;
+
+                        }
+
+                        var isOrderVerified = checkInputs()
+
+                        if (isOrderVerified === 'Yes')
+                        {
+                            actions.enable();
+                        }
+
+                        else
+                        {
+                            actions.disable();
+
+                        }
 
 
               },
