@@ -281,10 +281,52 @@
                   const captureOrderHandler = (details) => {
                       const payerName = details.payer.name.given_name;
                       console.log('Transaction completed');
-                  };
+
+                      // AJAX Functionality
+
+                        $.ajax({
+
+                            type: 'POST',
+                            url: '{% url "complete-order" %}',
+                            data: {
+
+                                name: $('#name').val(),
+                                email: $('#email').val(),
+                                address1: $('#address1').val(),
+                                address2: $('#address2').val(),
+                                city: $('#city').val(),
+
+                                country: $('#country').val(),
+                                postcode: $('#postcode').val(),
+
+                                
+                                csrfmiddlewaretoken: "{{csrf_token}}",
+                                action: 'post'
+                            },
+
+                            success: function(json){
+
+                                //console.log(json)
+
+                                window.location.replace("{% url 'payment-success' %}");        
+
+                            },
+
+                            error: function(xhr, errmsg, err){
+
+                                window.location.replace("{% url 'payment-failed' %}");
+
+
+                            }
+
+
+                        });
+
+
+                    };
 
                   return actions.order.capture().then(captureOrderHandler);
-              },
+                },
 
               // handle unrecoverable errors
               onError: (err) => {
@@ -301,7 +343,9 @@
 
      
     // Complete checkout
-     /*
+
+    /*
+     
      $(document).on('submit', function(e){
 
         e.preventDefault();
@@ -339,14 +383,14 @@
                 window.location.replace("{% url 'payment-failed' %}");
 
 
-    }
+            }
 
 
-});
+        });
 
-})
+    }) */
 
-*/
+
 
    </script>
 
