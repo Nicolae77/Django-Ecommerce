@@ -10,7 +10,7 @@
         <meta charset="utf-8"/>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        
 
         <!-- CSS -->
         
@@ -33,25 +33,24 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
 
     </head>
 
     <title> TashaMilbo </title>
 
 
-    <nav class="navbar navbar-expand-lg bg-dark justify-content-center">
+    <nav class="navbar navbar-expand-lg bg-transparent justify-content-center">
 
 
-        <a class="navbar-brand main-heading text-white" href="{% url 'store' %}"> 
+        <a class="navbar-brand main-heading text-black" href="{% url 'store' %}"> 
                 
         &nbsp; &nbsp; TashaMilbo 
         
         </a>
 
 
-        <button
-            class="navbar-toggler"
+        <button class="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarNavDropdown"
@@ -69,7 +68,7 @@
 
                 <li class="nav-item dropdown">
                     
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle text-black" href="#" id="navbarDropdown" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     
                         Categories
@@ -113,7 +112,7 @@
 
                     <li class="nav-item">
                 
-                        <a class="btn btn-alert navbar-btn text-white" type="button"  href="{% url 'dashboard' %}"><i class="fa fa-home" aria-hidden="true"></i> &nbsp; Dashboard </a>
+                        <a class="btn btn-alert navbar-btn text-black" type="button"  href="{% url 'dashboard' %}"><i class="fa fa-home" aria-hidden="true"></i> &nbsp; Dashboard </a>
 
                     </li>
 
@@ -121,7 +120,7 @@
 
                     <li class="nav-item">
                 
-                        <a class="btn btn-alert navbar-btn text-white" type="button"  href="{% url 'register' %}"> Register </a>
+                        <a class="btn btn-alert navbar-btn text-black" type="button"  href="{% url 'register' %}"> Register </a>
 
                     </li>
 
@@ -132,7 +131,7 @@
 
                     <li class="nav-item">
 
-                        <a class="btn btn-alert navbar-btn text-white" type="button"  href="{% url 'user-logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> &nbsp; Logout </a>
+                        <a class="btn btn-alert navbar-btn text-black" type="button"  href="{% url 'user-logout' %}"> <i class="fa fa-sign-out" aria-hidden="true"></i> &nbsp; Logout </a>
 
                     </li>
 
@@ -140,7 +139,7 @@
 
                     <li class="nav-item">
 
-                        <a class="btn btn-alert navbar-btn text-white" type="button"  href="{% url 'my-login' %}"> Login </a>
+                        <a class="btn btn-alert navbar-btn text-black" type="button"  href="{% url 'my-login' %}"> Login </a>
 
                     </li>
 
@@ -217,7 +216,7 @@
 
 
     <body>
-
+     
 
         {% block content %} 
         
