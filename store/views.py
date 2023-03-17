@@ -18,6 +18,7 @@ def categories(request):
 
     return {'all_categories': all_categories}
 
+
 def list_category(request, category_slug=None):
 
     category = get_object_or_404(Category, slug=category_slug)
@@ -34,5 +35,9 @@ def product_info(request, product_slug):
     context = {'product': product}
 
     return render(request, 'store/product-info.html', context)
+
+def about(request):
+
+    return render(request, 'store/about.html')
 
 

@@ -46,10 +46,13 @@
         <a class="navbar-brand main-heading text-black" href="{% url 'store' %}"> 
                 
         &nbsp; &nbsp; TashaMilbo 
+        <img class="image_logo" src="{% static 'media/images/main.jpg' %}" alt="logo">
         
         </a>
 
-
+   
+        
+    
         <button class="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -57,7 +60,7 @@
             aria-controls="navbarNavDropdown"
             aria-expanded="false"
             aria-label="Toggle navigation">
-
+            
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -105,7 +108,21 @@
         <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
 
             
+
+                <a class="btn btn-alert navbar-btn text-black" type="button"  href="{% url 'about' %}"> About </a>
+
+
+                <a class="btn btn-alert navbar-btn text-black" type="button"  href="{}"> Gallery </a>
+            
+
+                <a class="btn btn-alert navbar-btn text-black" type="button"  href="{}"> Contact </a>
+
+           
+
+            
             <ul class="navbar-nav ms-auto">
+
+                
 
                 {% if user.is_authenticated %}
 
@@ -231,14 +248,24 @@
     
         
         
-        
     </body>
 
-    
+    <div class="fixed-bottom align-items-center">
+        <footer>
+            <p>&copy;2021 Nicolae Caldarasan | All Rights Reserved</p>
+            &nbsp; &nbsp; &nbsp;
+            <a href="https://www.facebook.com/caldarasan.natalia" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/nataliacaldarasan/" class="fa fa-instagram"></a>
+            
+            
+        </footer>
+        </div>
+        
 
+    <script src="{% static 'js/app.js' %}"></script>
     
     
-     <script src="{% static 'js/app.js' %}"></script>
+     
 
 </html>
 

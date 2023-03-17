@@ -8,6 +8,8 @@ urlpatterns = [
     
     path('', views.store, name='store'),
 
+     path('about/', views.about, name='about'),
+
     # Individual products
 
     path('product/<slug:product_slug>/', views.product_info, name='product-info'),
@@ -15,5 +17,7 @@ urlpatterns = [
     # Individual category
     
     path('search/<slug:category_slug>/', views.list_category, name='list-category'),
+
+   
 
 ]

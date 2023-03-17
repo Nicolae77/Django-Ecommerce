@@ -27,7 +27,7 @@
 
       <div class="row mb-4 border product-item">
         
-        <div class="col-md-3 col-lg-2 order-md-first bg-light">
+        <div class="col-md-3 col-lg-2 order-md-first bg-white">
         
             <img class="img-fluid mx-auto d-block" width="200px" alt="Responsive image" src="{{product.image.url}}"> <!-- Product image -->
         
@@ -84,6 +84,25 @@
 
                   &nbsp;
 
+                  <label for="select">Size</label>
+                  
+                  <select id="select{{product.id}}">
+                  
+                    <option selected>
+                  
+                        {{item.size}}
+                  
+                    </option>
+                  
+                    <option value="">S</option>
+                  
+                    <option value="">M</option>
+                  
+                    <option value="">L</option>
+                  
+                  
+                  </select>
+
                   
                   <br> <br>
 
@@ -121,8 +140,6 @@
       <div class="col-12 text-end">
  
         <div class="h6 fw-bold"> Sub total: £ <div id="total" class="d-inline-flex">{{cart.get_total}} </div></div> <!-- cart.get_total --> 
-
-        <br>
 
         <a href="{% url 'store' %}">
           <button type="button" class="btn btn-outline-secondary btn-block">Continue Shopping</button>
